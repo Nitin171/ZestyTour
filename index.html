@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Planner</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white min-h-screen flex items-center justify-center font-sans">
+  <div class="rounded-3xl shadow-2xl bg-white max-w-xs w-full min-h-[700px] flex flex-col overflow-hidden border-2 border-yellow-300 relative">
+    <!-- Step 1: Plan Your Journey -->
+    <section id="step-1" class="flex-1 flex flex-col">
+      <!-- Hero Banner with Adventure & Nature Images and accent background -->
+      <div class="relative h-36 w-full flex items-center justify-center bg-gradient-to-r from-yellow-200 via-green-100 to-blue-100">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Adventure" class="absolute left-2 top-2 h-24 w-28 object-cover rounded-xl shadow-lg border-2 border-white" />
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nature" class="absolute right-2 bottom-2 h-24 w-28 object-cover rounded-xl shadow-lg border-2 border-white" />
+        <div class="z-10 text-center w-full">
+          <h2 class="text-2xl font-extrabold text-yellow-600 drop-shadow-lg">Plan Your Journey</h2>
+          <p class="text-green-700 mt-1 font-medium drop-shadow">Where would you like to go?</p>
+    </div>
+          </div>
+      <form class="flex-1 flex flex-col px-4 py-6 space-y-4 bg-white">
+        <div class="flex items-center bg-white rounded-xl shadow px-4 py-3 border-2 border-yellow-100 focus-within:border-yellow-400 transition">
+          <i class="fa-solid fa-location-dot text-yellow-500 mr-3"></i>
+          <input type="text" placeholder="Starting Destination" class="w-full outline-none bg-transparent font-semibold text-gray-800 placeholder-yellow-300" required>
+          </div>
+        <div class="flex items-center bg-white rounded-xl shadow px-4 py-3 border-2 border-yellow-100 focus-within:border-yellow-400 transition">
+          <i class="fa-solid fa-flag text-yellow-500 mr-3"></i>
+          <input type="text" placeholder="Final Destination" class="w-full outline-none bg-transparent font-semibold text-gray-800 placeholder-yellow-300" required>
+          </div>
+        <div>
+          <label class="font-semibold text-gray-800 mb-2 block">Select Tour Package</label>
+          <div class="grid grid-cols-2 gap-3">
+            <button type="button" class="tour-package-btn bg-gradient-to-r from-yellow-300 to-yellow-400 text-gray-900 rounded-xl shadow px-0 py-4 font-bold hover:from-yellow-400 hover:to-yellow-500 transition">Basic</button>
+            <button type="button" class="tour-package-btn bg-gradient-to-r from-green-200 to-green-300 text-gray-900 rounded-xl shadow px-0 py-4 font-bold hover:from-green-300 hover:to-green-400 transition">Standard</button>
+            <button type="button" class="tour-package-btn bg-gradient-to-r from-blue-200 to-blue-300 text-gray-900 rounded-xl shadow px-0 py-4 font-bold hover:from-blue-300 hover:to-blue-400 transition">Premium</button>
+            <button type="button" class="tour-package-btn bg-gradient-to-r from-orange-200 to-orange-300 text-gray-900 rounded-xl shadow px-0 py-4 font-bold hover:from-orange-300 hover:to-orange-400 transition">Luxury</button>
+          </div>
+          </div>
+      </form>
+      <div class="bg-white p-4 rounded-b-3xl flex justify-end">
+        <button id="next-1" class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white font-bold px-10 py-2 rounded-xl shadow hover:from-yellow-500 hover:to-yellow-600 transition">Next</button>
+          </div>
+    </section>
+    <!-- Step 2: Customize Experience -->
+    <section id="step-2" class="flex-1 flex-col hidden bg-white">
+      <form class="flex-1 flex flex-col px-4 py-6 space-y-4 bg-white">
+        <div class="flex justify-center mb-4">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Adventure" class="h-24 w-full object-cover rounded-xl shadow-lg border-2 border-white" />
+        </div>
+        <div>
+          <label class="font-semibold text-gray-800 mb-2 block">Age Group</label>
+          <div class="grid grid-cols-2 gap-3">
+            <button type="button" class="age-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition">18-25</button>
+            <button type="button" class="age-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition">26-35</button>
+            <button type="button" class="age-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition">36-50</button>
+            <button type="button" class="age-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition">50+</button>
+          </div>
+        </div>
+        <div>
+          <label class="font-semibold text-gray-800 mb-2 block">Type of Place</label>
+          <div class="grid grid-cols-2 gap-3">
+            <button type="button" class="place-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition">Adventure</button>
+            <button type="button" class="place-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition">Relaxation</button>
+            <button type="button" class="place-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition">Cultural</button>
+            <button type="button" class="place-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition">Nature</button>
+          </div>
+        </div>
+        <div>
+          <label class="font-semibold text-gray-800 mb-2 block">Budget (per day)</label>
+          <input id="budget-slider" type="range" min="100" max="1000" value="500" class="w-full accent-yellow-500">
+          <div class="text-yellow-600 text-center font-bold mt-1" id="budget-value">$500</div>
+        </div>
+        <div>
+          <label class="font-semibold text-gray-800 mb-2 block">Mode of Transportation</label>
+          <div class="grid grid-cols-2 gap-3">
+            <button type="button" class="transport-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition flex items-center justify-center"><i class="fa-solid fa-car-side mr-2"></i>Car</button>
+            <button type="button" class="transport-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition flex items-center justify-center"><i class="fa-solid fa-train mr-2"></i>Train</button>
+            <button type="button" class="transport-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition flex items-center justify-center"><i class="fa-solid fa-plane mr-2"></i>Flight</button>
+            <button type="button" class="transport-btn bg-white text-black rounded-xl shadow px-0 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black transition flex items-center justify-center"><i class="fa-solid fa-bus mr-2"></i>Bus</button>
+          </div>
+        </div>
+      </form>
+      <div class="bg-white p-4 rounded-b-3xl flex justify-between">
+        <button id="prev-2" class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-8 py-2 rounded-xl shadow hover:from-yellow-500 hover:to-yellow-600 transition">Previous</button>
+        <button id="next-2" class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-8 py-2 rounded-xl shadow hover:from-yellow-500 hover:to-yellow-600 transition">Next</button>
+      </div>
+    </section>
+    <!-- Step 3: Customize Itinerary -->
+    <section id="step-3" class="flex-1 flex-col hidden bg-white">
+      <div class="bg-gradient-to-r from-yellow-200 via-green-100 to-blue-100 rounded-t-3xl p-6 text-center flex flex-col items-center">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Popular Places" class="h-20 w-32 object-cover rounded-xl shadow-lg mb-2 border-2 border-white" />
+        <h2 class="text-2xl font-extrabold text-yellow-600 drop-shadow-lg">Customize Your Itinerary</h2>
+        <p class="text-gray-700 mt-1 font-medium drop-shadow">Select places to visit</p>
+      </div>
+      <div class="flex-1 flex flex-col px-4 py-6 space-y-4 overflow-y-auto bg-white">
+        <div>
+          <h3 class="font-semibold mb-2 text-yellow-600">Popular Places</h3>
+          <div class="flex space-x-3 overflow-x-auto">
+            <div class="bg-white rounded-xl shadow w-48 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="rounded-t-xl h-24 w-full object-cover"/>
+              <div class="p-2">
+                <div class="font-bold text-black">Amazing Place 1</div>
+                <div class="text-sm text-gray-600">A beautiful destination with stunning views</div>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow w-48 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="rounded-t-xl h-24 w-full object-cover"/>
+              <div class="p-2">
+                <div class="font-bold text-black">Amazing Place 2</div>
+                <div class="text-sm text-gray-600">A beautiful destination with stunning views</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-yellow-600">Recommended Hotels</h3>
+          <div class="flex space-x-3 overflow-x-auto">
+            <div class="bg-white rounded-xl shadow w-48 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb2101a?auto=format&fit=crop&w=400&q=80" class="rounded-t-xl h-24 w-full object-cover"/>
+              <div class="p-2">
+                <div class="font-bold text-black">Luxury Hotel 1</div>
+                <div class="text-sm text-yellow-600">$199/night</div>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow w-48 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb2101a?auto=format&fit=crop&w=400&q=80" class="rounded-t-xl h-24 w-full object-cover"/>
+              <div class="p-2">
+                <div class="font-bold text-black">Luxury Hotel 2</div>
+                <div class="text-sm text-yellow-600">$199/night</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-yellow-600">Local Restaurants</h3>
+          <div class="flex space-x-3 overflow-x-auto">
+            <div class="bg-white rounded-xl shadow w-48 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" class="rounded-t-xl h-24 w-full object-cover"/>
+              <div class="p-2">
+                <div class="font-bold text-black">Gourmet Restaurant 1</div>
+                <div class="text-sm text-gray-600">Local Cuisine</div>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow w-48 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" class="rounded-t-xl h-24 w-full object-cover"/>
+              <div class="p-2">
+                <div class="font-bold text-black">Gourmet Restaurant 2</div>
+                <div class="text-sm text-gray-600">Local Cuisine</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-b-3xl flex justify-between">
+        <button id="prev-3" class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-8 py-2 rounded-xl shadow hover:from-yellow-500 hover:to-yellow-600 transition">Previous</button>
+        <button id="finish" class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-8 py-2 rounded-xl shadow hover:from-yellow-500 hover:to-yellow-600 transition">Finish</button>
+      </div>
+    </section>
+    <!-- Step 4: Travel Itinerary Summary -->
+    <section id="step-4" class="flex-1 flex-col hidden bg-white">
+      <div class="bg-gradient-to-r from-yellow-200 via-green-100 to-blue-100 rounded-t-3xl p-6 text-center flex flex-col items-center">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Itinerary Map" class="h-20 w-32 object-cover rounded-xl shadow-lg mb-2 border-2 border-white" />
+        <h2 class="text-2xl font-extrabold text-yellow-600 drop-shadow-lg">Your Travel Itinerary</h2>
+        <p class="text-gray-700 mt-1 font-medium drop-shadow">Ready for your adventure!</p>
+      </div>
+      <div class="flex-1 flex flex-col px-4 py-6 space-y-4 overflow-y-auto bg-white">
+        <div class="bg-white rounded-xl p-4 flex flex-col items-center shadow-lg">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Europe_blank_map.png/400px-Europe_blank_map.png" class="rounded-xl w-full h-40 object-cover mb-2"/>
+          <div class="w-full">
+            <div class="flex items-center mb-2 text-black"><i class="fa-solid fa-plane-departure text-yellow-600 mr-2"></i> <span id="summary-departure">Departure</span></div>
+            <div class="flex items-center mb-2 text-black"><i class="fa-solid fa-plane-arrival text-yellow-600 mr-2"></i> <span id="summary-arrival">Arrival</span></div>
+            <div class="flex items-center mb-2 text-black"><i class="fa-solid fa-money-bill-wave text-yellow-600 mr-2"></i> <span id="summary-budget">Budget</span></div>
+            <div class="flex items-center mb-2 text-black"><i class="fa-solid fa-car-side text-yellow-600 mr-2"></i> <span id="summary-transport">Transportation</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-b-3xl flex justify-between">
+        <button id="prev-4" class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-8 py-2 rounded-xl shadow hover:from-yellow-500 hover:to-yellow-600 transition">Previous</button>
+        <button id="download-itinerary" class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-8 py-2 rounded-xl shadow hover:from-yellow-500 hover:to-yellow-600 transition">Download Itinerary</button>
+      </div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html> 
