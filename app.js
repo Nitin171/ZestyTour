@@ -134,7 +134,13 @@ let currentStep = 0;
 
 function showStep(idx) {
   steps.forEach((step, i) => {
-    if (step) step.classList.toggle('hidden', i !== idx);
+    if (step) {
+      if (i === idx) {
+        step.classList.add('active');
+      } else {
+        step.classList.remove('active');
+      }
+    }
   });
   currentStep = idx;
 }
@@ -152,14 +158,13 @@ if (document.getElementById('next-2')) {
 if (document.getElementById('prev-3')) {
   document.getElementById('prev-3').onclick = () => showStep(1);
 }
+if (document.getElementById('next-3')) {
+  document.getElementById('next-3').onclick = () => showStep(3);
+}
 if (document.getElementById('finish')) {
   document.getElementById('finish').onclick = () => {
-    // Fill summary
-    document.getElementById('summary-departure').textContent = startDestination.value || 'Departure';
-    document.getElementById('summary-arrival').textContent = endDestination.value || 'Arrival';
-    document.getElementById('summary-budget').textContent = `$${budgetSlider.value}/day`;
-    document.getElementById('summary-transport').textContent = selectedTransport || 'Transportation';
-    showStep(3);
+    // Optionally, show a message or redirect
+    alert('Thank you for using Zest Tour! Your plan is ready.');
   };
 }
 if (document.getElementById('prev-4')) {
@@ -263,6 +268,12 @@ function setupGuideCall() {
       btn.disabled = false;
     }, 2500);
   });
+}
+
+function setupTabs() {
+  // This function sets up tab functionality if needed
+  // For now, it's a placeholder since the current pages don't use tabs
+  console.log('Tabs setup complete');
 }
 
 function setupARPreview() {
